@@ -1,11 +1,13 @@
 body {
   margin: 0;
+  --color-bone: #e4d6bd;
+  --color-off-white: #faf7f2;
 }
 
 main {
   font-family: Verdana;
   background: linear-gradient(45deg, #141e30, #243b55);
-  color: #e4d6bd;
+  color: var(--color-bone);
 }
 
 header {
@@ -23,7 +25,7 @@ h1 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 5px;
 }
 
@@ -51,25 +53,49 @@ form {
 
 }
 
-[type="text"], [type="email"], [type="number"], select {
+input:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px var(--color-bone);
+}
+
+[type="text"],
+[type="email"],
+[type="number"],
+select {
   height: 28px;
   padding-left: 5px;
-  background-color: #faf7f2;
+  background-color: var(--color-off-white);
 }
 
-[type="text"], [type="email"], [type="number"], select, form, textarea {
+[type="text"],
+[type="email"],
+[type="number"],
+select,
+form,
+textarea {
   font-size: 20px;
-}
-
-input, textarea, fieldset, select {
-  border-radius: 5px;
   
 }
+
+input,
+textarea, 
+fieldset, 
+select {
+  border-radius: 5px;
+  border: 1px solid var(--color-bone)
+}
+
 
 textarea {
   font-family: verdana;
   padding: 5px 10px;
-  background-color: #faf7f2;
+  background-color: var(--color-off-white);
+  min-height: 100px;
+  resize: vertical;
 }
 
 #submit {
@@ -77,13 +103,37 @@ textarea {
   height: 30px;
   margin: 10px auto 0 auto;
   font-size: 20px;
-  background-color: #faf7f2;
+  background-color: var(--color-off-white);
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: var(--color-bone)
 }
 
 #header-form {
-  border-left: 10px dashed white;
-  border-right: 10px dashed white;
+  border-left: 10px dashed var(--color-off-white);
+  border-right: 10px dashed var(--color-off-white);
   width: 55%;
   min-width: 400px;
   margin: auto;
+}
+
+@media (max-width: 450px){
+  #header-form {
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    min-width: 200px;
+  }
+  .form-container {
+    margin-top: 50px;
+    height: 900px;
+  }
+}
+
+@media (max-width: 225px){
+  .form-container {
+    margin-top: 80px;
+  }
 }

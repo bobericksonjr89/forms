@@ -6,61 +6,62 @@
     </head>
     <body>
         <main>
-        <div id="header-form">
-        <div id="header-container">
-            <header>
-            <h1 id="title">Dog Digits</h1>
-            <p id="description">A new way to gather data about dogs</p>
-            </header>
-        </div>
-
-        <div class="form-container">
-            <form id="survey-form">
-            <label for="name" id="name-label">Name:</label>
-            <input type="text" id="name" name="name" placeholder="First name" required>
-
-            <label for="email" id="email-label">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Email address" required>
-
-            <label for="number" id="number-label">Number of dogs:</label>
-            <input type="number" id="number" max="10" min="0" placeholder="Dog count" name="number" required>
-
-            <label for="dropdown" id="dropdown-label">Home type</label>
-            <select id="dropdown" name="dropdown">
-                <option value="house">House</option>
-                <option value="apartment">Apartment</option>
-                <option value="condo">Condo</option>
-                <option value="townhouse">Townhouse</option>
-                <option value="other">Other</option>
-            </select>
-
-            <fieldset>
-                <legend>Are you a dog person or a cat person?</legend>
-                <input id="dog" type="radio" name="status" value="dog" required>
-                <label for="dog">Dog person</label>
-                <input id="cat" type="radio" name="status" value="cat">
-                <label for="cat">Cat person</label>
-                <input id="both" type="radio" name="status" value="both">
-                <label for="both">I do not discriminate</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>I am a dog...</legend>
-                <input id="owner" type="checkbox" name="relationship" value="owner">
-                <label for="owner">owner</label>
-                <input id="lover" type="checkbox" name="relationship" value="lover">
-                <label for="lover">lover</label>
-                <input id="enthusiast" type="checkbox" name="relationship" value="enthusiast">
-                <label for="enthusiast">enthusiast</label>
-            </fieldset>
-
-            <label for="comments">Any additional comments?</label>
-            <textarea id="comments" name="comments" rows="10" cols="100">Add any additional comments here</textarea>
-
-            <input type="submit" id="submit">
-            </form>
-        </div>
-        </div>
-        </main>
+            <div id="header-form">
+              <div id="header-container">
+                <header>
+                  <h1 id="title">Dog Digits</h1>
+                  <p id="description">A new way to gather data about dogs</p>
+                </header>
+              </div>
+          
+              <div class="form-container">
+                <form id="survey-form">
+                  <label for="name" id="name-label">Name:</label>
+                  <input type="text" id="name" name="name" placeholder="First name" required>
+          
+                  <label for="email" id="email-label">Email:</label>
+                  <input type="email" id="email" name="email" placeholder="Email address" required>
+          
+                  <label for="number" id="number-label">Number of dogs:</label>
+                  <input type="number" id="number" max="10" min="0" placeholder="How many dogs are in your family?" name="number" required>
+          
+                  <label for="dropdown" id="dropdown-label">Home type</label>
+                  <select id="dropdown" name="dropdown">
+                    <option disabled selected>How would you categorize your home</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="condo">Condo</option>
+                    <option value="townhouse">Townhouse</option>
+                    <option value="other">Other</option>
+                  </select>
+          
+                  <fieldset>
+                    <legend>Are you a dog person or a cat person?</legend>
+                    <input id="dog" type="radio" name="status" value="dog" required checked>
+                    <label for="dog">Dog person</label>
+                    <input id="cat" type="radio" name="status" value="cat">
+                    <label for="cat">Cat person</label>
+                    <input id="both" type="radio" name="status" value="both">
+                    <label for="both">I do not discriminate</label>
+                  </fieldset>
+          
+                  <fieldset>
+                    <legend>I am a dog...</legend>
+                    <input id="owner" type="checkbox" name="relationship" value="owner">
+                    <label for="owner">Owner</label>
+                    <input id="lover" type="checkbox" name="relationship" value="lover">
+                    <label for="lover">Lover</label>
+                    <input id="enthusiast" type="checkbox" name="relationship" value="enthusiast">
+                    <label for="enthusiast">Enthusiast</label>
+                  </fieldset>
+          
+                  <label for="comments">Any additional comments?</label>
+                  <textarea id="comments" name="comments" rows="10" cols="100" placeholder="Add any additional comments here"></textarea>
+          
+                  <input type="submit" id="submit">
+                </form>
+              </div>
+            </div>
+          </main>
     </body>
 </html>
